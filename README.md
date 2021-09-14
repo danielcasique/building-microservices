@@ -61,14 +61,14 @@ java -jar reservation-service\target\reservation-service-0.0.1-SNAPSHOT.jar
 
 ### Testing
 1. The below image shows how the eureka server looks like:
-[testing_01](https://github.com/danielcasique/building-microservices/blob/master/images/eureka_server.png)
+![testing_01](https://github.com/danielcasique/building-microservices/blob/master/images/eureka_server.png)
 
 2. Netflix-Zuul proxy
 The following image shows the reservations list service get from the reservation-service server.
-[testing_02_01](https://github.com/danielcasique/building-microservices/blob/master/images/zuul_01.png)
+![testing_02_01](https://github.com/danielcasique/building-microservices/blob/master/images/zuul_01.png)
 
 The following image shows the reservations list service get from the reservation-client server by using zuul proxy.
-[testing_02_02](https://github.com/danielcasique/building-microservices/blob/master/images/zuul_02.png)
+![testing_02_02](https://github.com/danielcasique/building-microservices/blob/master/images/zuul_02.png)
 
 
 
