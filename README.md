@@ -63,12 +63,22 @@ java -jar reservation-service\target\reservation-service-0.0.1-SNAPSHOT.jar
 1. The below image shows how the eureka server looks like:
 ![testing_01](https://github.com/danielcasique/building-microservices/blob/master/images/eureka_server.png)
 
-2. Netflix-Zuul proxy <br />
+2. Testing Netflix-Zuul proxy <br />
 The following image shows the reservations list service get from the reservation-service server.
 ![testing_02_01](https://github.com/danielcasique/building-microservices/blob/master/images/zuul_01.png)
 
 The following image shows the reservations list service get from the reservation-client server by using zuul proxy.
 ![testing_02_02](https://github.com/danielcasique/building-microservices/blob/master/images/zuul_02.png)
 
+3. Testing hystrix  <br />
+The hystrix.stream endpoint tests each service tagged with  @HystrixCommand
+![testing_03_01](https://github.com/danielcasique/building-microservices/blob/master/images/hystrix01.png)
 
+The following image shows how to add the hystrix stream to the hystrix dashboard
+![testing_03_02](https://github.com/danielcasique/building-microservices/blob/master/images/hystrix02.png)
 
+The below image shows hystrix stats when all services are working correctly.
+![testing_03_03](https://github.com/danielcasique/building-microservices/blob/master/images/hystrix03.png)
+
+Now, you can stop the reservation-service and see how the stats change.
+![testing_03_04](https://github.com/danielcasique/building-microservices/blob/master/images/hystrix04.png)
