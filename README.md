@@ -15,11 +15,25 @@ The folder microservices-config contains the properties files for the modules eu
 
 ### eureka-service
 Uses the spring-cloud-starter-netflix-eureka-server to enable a server for registering, discovering and load balancing microservices. ([more info](https://spring.io/guides/gs/service-registration-and-discovery/))
+The service connects to config-server to get all properties, but it needs to set up inside the module all the properties to connect to config-server. (in the application.properties file)
 
 ### reservation-service
-Spring boot application that exposes services for saving a reservation, list reservations and get a message. The service connects to config-server to get all properties. It only defines the properties to connect to config-server. Also, in the config-server is defined the properties to connect to Kafka and exposes the actuator endpoints.
+Spring boot application that exposes services for saving a reservation, list reservations and get a message. The service connects to config-server to get all properties, but it needs to set up inside the module all the properties to connect to config-server. (in the application.properties file). Also, in the config-server is defined the properties to connect to Kafka and exposes the actuator endpoints.
 The reservation-service is listening to receive any data coming from Kafka service and save a reservation.
 
 ### reservation-client
-It uses spring-cloud-starter-netflix-zuul to create a proxy server. The service connects to config-server to get all properties. It only defines the properties to connect to config-server. Also, in the config-server is defined the properties to connect to Kafka, exposes the actuator endpoints, and define the routes for Zuul service. 
+It uses spring-cloud-starter-netflix-zuul to create a proxy server. The service connects to config-server to get all properties, but it needs to set up inside the module all the properties to connect to config-server. (in the application.properties file). Also, in the config-server is defined the properties to connect to Kafka, exposes the actuator endpoints, and define the routes for Zuul service. 
 The reservation-client exposes the POST service reservations, which recive the data and send it to a Kafka service. 
+[Here](https://ricardogeek.com/microservicios-en-tiempo-real-con-kafka-y-spring-cloud/) more info about how to implement a kafka client (producers and consumers)
+[Here](https://medium.com/@malindudilshan389/api-gateway-with-spring-cloud-netflix-zuul-f207905fbe2b) more infor about how to implement Netflix-Zuul.
+
+### hystrix-monitor
+To support the tolerance, and monitor the services status. ([more info](https://www.baeldung.com/spring-cloud-netflix-hystrix) and [here](https://programmer.group/simple-example-of-using-hystrix-in-spring-cloud-spring-cloud-learning-note-6.html))
+The reservations-service and reservation-client active the hystrix by using the tags @EnableCircuitBreaker and @HystrixCommand.
+The service connects to config-server to get all properties, but it needs to set up inside the module all the properties to connect to config-server. (in the application.properties file)
+
+### kafka
+It's a docker image. The docker compose file is located at kafka folder ([more info](https://zipkin.io/pages/quickstart.html))
+
+### Zipkin
+It's docker image to monitor services ([more info](https://zipkin.io/pages/quickstart.html))
