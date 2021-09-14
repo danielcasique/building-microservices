@@ -7,4 +7,4 @@ This is an implementation of https://www.youtube.com/watch?v=ZyK5QrKCbwM using t
 - Java 11
 
 ## Architecture
-(https://github.com/danielcasique/building-microservices/blob/master/images/building_microservices.png?raw=true)
+![Building microservices architecture](https://github.com/danielcasique/building-microservices/blob/master/images/building_microservices.png?raw=true)
