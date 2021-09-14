@@ -21,5 +21,5 @@ Spring boot application that exposes services for saving a reservation, list res
 The reservation-service is listening to receive any data coming from Kafka service and save a reservation.
 
 ### reservation-client
-It uses spring-cloud-starter-netflix-zuul to create a proxy server. he service connects to config-server to get all properties. It only defines the properties to connect to config-server. Also, in the config-server is defined the properties to connect to Kafka, exposes the actuator endpoints, and define the routes for Zuul service. 
+It uses spring-cloud-starter-netflix-zuul to create a proxy server. The service connects to config-server to get all properties. It only defines the properties to connect to config-server. Also, in the config-server is defined the properties to connect to Kafka, exposes the actuator endpoints, and define the routes for Zuul service. 
 The reservation-client exposes the POST service reservations, which recive the data and send it to a Kafka service. 
