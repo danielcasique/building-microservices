@@ -45,6 +45,7 @@ It's docker image to monitor services ([more info](https://zipkin.io/pages/quick
 - Install docker-compose (not need on Windows)
 - In the config-server module, it's needed to update the property spring.cloud.config.server.git.uri in the application.properties according with the locally in the current enviorment. The folder microservices-config must be a git repository if you want to use a local folder.
 
+### Steps to run
 1. Start the kafka docker image. Go to kafka folder and execute the below command:
 docker-compose up -d
 2. Start the Zipkin docker image by executing the below command:
