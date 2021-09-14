@@ -23,13 +23,13 @@ The reservation-service is listening to receive any data coming from Kafka servi
 
 ### reservation-client
 It uses spring-cloud-starter-netflix-zuul to create a proxy server. The service connects to config-server to get all properties, but it needs to set up inside the module all the properties to connect to config-server. (in the application.properties file). Also, in the config-server is defined the properties to connect to Kafka, exposes the actuator endpoints, and define the routes for Zuul service. 
-The reservation-client exposes the POST service reservations, which recive the data and send it to a Kafka service. <b/>
-[Here](https://ricardogeek.com/microservicios-en-tiempo-real-con-kafka-y-spring-cloud/) more info about how to implement a kafka client (producers and consumers).<b/>
+The reservation-client exposes the POST service reservations, which recive the data and send it to a Kafka service. 
+[Here](https://ricardogeek.com/microservicios-en-tiempo-real-con-kafka-y-spring-cloud/) more info about how to implement a kafka client (producers and consumers).
 [Here](https://medium.com/@malindudilshan389/api-gateway-with-spring-cloud-netflix-zuul-f207905fbe2b) more infor about how to implement Netflix-Zuul.
 
 ### hystrix-monitor
-To support the tolerance, and monitor the services status. ([more info](https://www.baeldung.com/spring-cloud-netflix-hystrix) and [here](https://programmer.group/simple-example-of-using-hystrix-in-spring-cloud-spring-cloud-learning-note-6.html))
-The reservations-service and reservation-client active the hystrix by using the tags @EnableCircuitBreaker and @HystrixCommand.
+To support the tolerance, and monitor the services status. ([more info](https://www.baeldung.com/spring-cloud-netflix-hystrix) and [here](https://programmer.group/simple-example-of-using-hystrix-in-spring-cloud-spring-cloud-learning-note-6.html)). <br />
+The reservations-service and reservation-client active the hystrix by using the tags @EnableCircuitBreaker and @HystrixCommand. <br />
 The service connects to config-server to get all properties, but it needs to set up inside the module all the properties to connect to config-server. (in the application.properties file)
 
 ### kafka
