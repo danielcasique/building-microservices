@@ -7,7 +7,7 @@ This is an implementation of https://www.youtube.com/watch?v=ZyK5QrKCbwM using t
 - Java 11
 
 ## Architecture
-![Building microservices architecture](https://github.com/danielcasique/building-microservices/blob/master/images/building_microservices.png?raw=true)
+![Building microservices architecture](https://github.com/danielcasique/building-microservices/blob/master/images/building-microservices.png?raw=true)
 
 ### config-server
 Uses the spring-cloud-config-server in order to allow other modules to get the properties from a centralized site.
