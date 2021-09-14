@@ -74,7 +74,7 @@ The following image shows the reservations list service get from the reservation
 The hystrix.stream endpoint tests each service tagged with  @HystrixCommand
 ![testing_03_01](https://github.com/danielcasique/building-microservices/blob/master/images/hystrix01.png)
 
-The following image shows how to add the hystrix stream to the hystrix dashboard
+The following image shows how to add the hystrix stream to the hystrix dashboard. After adding the hystrix.stream url, clic on "monitor stream".
 ![testing_03_02](https://github.com/danielcasique/building-microservices/blob/master/images/hystrix02.png)
 
 The below image shows hystrix stats when all services are working correctly.
