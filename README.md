@@ -8,3 +8,5 @@ This is an implementation of https://www.youtube.com/watch?v=ZyK5QrKCbwM using t
 
 ## Architecture
 ![Building microservices architecture](https://github.com/danielcasique/building-microservices/blob/master/images/building_microservices.png?raw=true)
+
+### Config-server
