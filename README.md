@@ -82,3 +82,7 @@ The below image shows hystrix stats when all services are working correctly.
 
 Now, you can stop the reservation-service and see how the stats change.
 ![testing_03_04](https://github.com/danielcasique/building-microservices/blob/master/images/hystrix04.png)
+
+4. Testing Kafka  <br />
+In the left image, you can see the names services called from the browser. After, from postman we added a new reservation (middle image). Finally, in the right image you can see the new reservation was added. In fact, the reservation-client (producer) sent the reservation to the Kafka service, and the reservation-service (consumer) is listening for any change on Kafka service to read the tail and create a new reservation.
+![testing_04](https://github.com/danielcasique/building-microservices/blob/master/images/kafka_01.png)
