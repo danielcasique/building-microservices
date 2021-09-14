@@ -23,8 +23,8 @@ The reservation-service is listening to receive any data coming from Kafka servi
 
 ### reservation-client
 It uses spring-cloud-starter-netflix-zuul to create a proxy server. The service connects to config-server to get all properties, but it needs to set up inside the module all the properties to connect to config-server. (in the application.properties file). Also, in the config-server is defined the properties to connect to Kafka, exposes the actuator endpoints, and define the routes for Zuul service. 
-The reservation-client exposes the POST service reservations, which recive the data and send it to a Kafka service. 
-[Here](https://ricardogeek.com/microservicios-en-tiempo-real-con-kafka-y-spring-cloud/) more info about how to implement a kafka client (producers and consumers)
+The reservation-client exposes the POST service reservations, which recive the data and send it to a Kafka service. <b/>
+[Here](https://ricardogeek.com/microservicios-en-tiempo-real-con-kafka-y-spring-cloud/) more info about how to implement a kafka client (producers and consumers).<b/>
 [Here](https://medium.com/@malindudilshan389/api-gateway-with-spring-cloud-netflix-zuul-f207905fbe2b) more infor about how to implement Netflix-Zuul.
 
 ### hystrix-monitor
